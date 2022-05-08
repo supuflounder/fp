@@ -8,7 +8,7 @@ The Value edit control and associated spin control show and allow you to modify 
 
 The representation also allows you to see the hexadecimal value of the mantissa, and edit it by changing the hex value displayed.
 
-There are four buttons to select specific representations, such as +inf, -inf, +Nan and -NaN.  For the NaN representations, an exponent of all 1s and a nonzero mantissa is a NaN, and I arbitrarily chose to set the low-order bit of the mantissa to represent these values.  You can experiment with other bits.
+There are four buttons to select specific representations, such as `+inf`, `-inf`, `+Nan` and `-NaN`.  For the NaN representations, an exponent of all 1s and a nonzero mantissa is a NaN, and I arbitrarily chose to set the low-order bit of the mantissa to represent these values.  You can experiment with other bits.
 
 Together, all of these controls allow you to manipulate what is called the number. 
 
