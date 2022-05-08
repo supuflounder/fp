@@ -4,6 +4,12 @@ VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "fp", "fp.vcxproj", "{9FA1D344-D191-4FE0-ADD3-68FB73FC60C4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1C275016-A779-43EA-9E6A-8D17EB526AC8}"
+	ProjectSection(SolutionItems) = preProject
+		assets\images\fpscreen.PNG = assets\images\fpscreen.PNG
+		ReadMe.md = ReadMe.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
