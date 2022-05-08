@@ -1,6 +1,8 @@
+##Microsoft Foundation Class Output
+
 ================================================================================
     MICROSOFT FOUNDATION CLASS LIBRARY : fp Project Overview
-===============================================================================
+================================================================================
 
 The application wizard has created this fp application for 
 you.  This application not only demonstrates the basics of using the Microsoft 
@@ -48,7 +50,7 @@ fpDlg.h, fpDlg.cpp - the dialog
     in fp.rc, which can be edited in Microsoft Visual C++.
 /////////////////////////////////////////////////////////////////////////////
 
-Other Features:
+###Other Features:
 
 ActiveX Controls
     The application includes support to use ActiveX controls.
@@ -58,7 +60,7 @@ Printing and Print Preview support
     commands by calling member functions in the CView class from the MFC library.
 /////////////////////////////////////////////////////////////////////////////
 
-Other standard files:
+###Other standard files:
 
 StdAfx.h, StdAfx.cpp
     These files are used to build a precompiled header (PCH) file
@@ -77,7 +79,7 @@ fp.manifest
 	executable or it may be included in the executable in the form of a resource. 
 /////////////////////////////////////////////////////////////////////////////
 
-Other notes:
+###Other notes:
 
 The application wizard uses "TODO:" to indicate parts of the source code you
 should add to or customize.
