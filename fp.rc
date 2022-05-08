@@ -1,0 +1,563 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\fp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\fp.ico"
+IDI_JMNCO               ICON                    "res\\jmnco.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "About Floating Point Explorer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,9,21,20
+    LTEXT           "Floating Point Explorer Version 1.0",IDC_STATIC,39,10,
+                    119,8,SS_NOPREFIX
+    LTEXT           "Copyright © 2007, Joseph M. Newcomer, All Rights Reserved",
+                    IDC_STATIC,39,38,189,25
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,16,WS_GROUP
+    ICON            IDI_JMNCO,IDC_STATIC,10,41,20,20
+END
+
+IDD_FP_DIALOG DIALOGEX 0, 0, 827, 363
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Floating Point Explorer"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_63,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,5,53,8,8
+    CONTROL         "",IDC_62,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,53,8,
+                    8
+    CONTROL         "",IDC_61,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,24,53,8,
+                    8
+    CONTROL         "",IDC_60,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,33,53,8,
+                    8
+    CONTROL         "",IDC_59,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,43,53,8,
+                    8
+    CONTROL         "",IDC_58,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,52,53,8,
+                    8
+    CONTROL         "",IDC_57,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,61,53,8,
+                    8
+    CONTROL         "",IDC_56,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,71,53,8,
+                    8
+    CONTROL         "",IDC_55,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,80,53,8,
+                    8
+    CONTROL         "",IDC_54,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,89,53,8,
+                    8
+    CONTROL         "3",IDC_53,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,99,53,8,
+                    8
+    CONTROL         "",IDC_52,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,108,53,8,
+                    8
+    CONTROL         "",IDC_51,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,117,53,8,
+                    8
+    CONTROL         "",IDC_50,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,127,53,8,
+                    8
+    CONTROL         "",IDC_49,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,136,53,8,
+                    8
+    CONTROL         "",IDC_48,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,145,53,8,
+                    8
+    CONTROL         "",IDC_47,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,155,53,8,
+                    8
+    CONTROL         "",IDC_46,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,164,53,8,
+                    8
+    CONTROL         "",IDC_45,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,173,53,8,
+                    8
+    CONTROL         "",IDC_44,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,183,53,8,
+                    8
+    CONTROL         "",IDC_43,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,192,53,8,
+                    8
+    CONTROL         "",IDC_42,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,201,53,8,
+                    8
+    CONTROL         "",IDC_41,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,211,53,8,
+                    8
+    CONTROL         "",IDC_40,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,221,53,8,
+                    8
+    CONTROL         "",IDC_39,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,230,53,8,
+                    8
+    CONTROL         "",IDC_38,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,239,53,8,
+                    8
+    CONTROL         "",IDC_37,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,249,53,8,
+                    8
+    CONTROL         "",IDC_36,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,258,53,8,
+                    8
+    CONTROL         "",IDC_35,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,53,8,
+                    8
+    CONTROL         "",IDC_34,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,277,53,8,
+                    8
+    CONTROL         "",IDC_33,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,286,53,8,
+                    8
+    CONTROL         "",IDC_32,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,295,53,8,
+                    8
+    CONTROL         "",IDC_31,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,305,53,8,
+                    8
+    CONTROL         "",IDC_30,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,314,53,8,
+                    8
+    CONTROL         "",IDC_29,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,323,53,8,
+                    8
+    CONTROL         "",IDC_28,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,333,53,8,
+                    8
+    CONTROL         "",IDC_27,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,342,53,8,
+                    8
+    CONTROL         "",IDC_26,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,351,53,8,
+                    8
+    CONTROL         "",IDC_25,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,361,53,8,
+                    8
+    CONTROL         "",IDC_24,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,370,53,8,
+                    8
+    CONTROL         "",IDC_23,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,379,53,8,
+                    8
+    CONTROL         "",IDC_22,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,389,53,8,
+                    8
+    CONTROL         "",IDC_21,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,398,53,8,
+                    8
+    CONTROL         "",IDC_20,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,407,53,8,
+                    8
+    CONTROL         "",IDC_19,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,417,53,8,
+                    8
+    CONTROL         "",IDC_18,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,426,53,8,
+                    8
+    CONTROL         "",IDC_17,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,435,53,8,
+                    8
+    CONTROL         "",IDC_16,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,445,53,8,
+                    8
+    CONTROL         "",IDC_15,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,454,53,8,
+                    8
+    CONTROL         "",IDC_14,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,463,53,8,
+                    8
+    CONTROL         "",IDC_13,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,473,53,8,
+                    8
+    CONTROL         "",IDC_12,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,482,53,8,
+                    8
+    CONTROL         "",IDC_11,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,491,53,8,
+                    8
+    CONTROL         "",IDC_10,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,501,53,8,
+                    8
+    CONTROL         "",IDC_09,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,511,53,8,
+                    8
+    CONTROL         "",IDC_08,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,520,53,8,
+                    8
+    CONTROL         "",IDC_07,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,529,53,8,
+                    8
+    CONTROL         "",IDC_06,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,539,53,8,
+                    8
+    CONTROL         "",IDC_05,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,548,53,8,
+                    8
+    CONTROL         "",IDC_04,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,557,53,8,
+                    8
+    CONTROL         "",IDC_03,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,567,53,8,
+                    8
+    CONTROL         "",IDC_02,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,576,53,8,
+                    8
+    CONTROL         "",IDC_01,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,585,53,8,
+                    8
+    CONTROL         "",IDC_00,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,595,53,8,
+                    8
+    GROUPBOX        "Exponent",IDC_STATIC,15,10,103,101
+    RTEXT           "Value",IDC_STATIC,42,73,18,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_BINARY_EXPONENT,63,73,40,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_BINARY_EXPONENT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,104,73,11,14
+    RTEXT           "Excess-1023",IDC_STATIC,18,91,42,15,SS_CENTERIMAGE
+    EDITTEXT        IDC_EXCESS1023_EXPONENT,63,91,40,15,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_EXCESS_1023_EXPONENT,"msctls_updown32",
+                    UDS_SETBUDDYINT | UDS_AUTOBUDDY | UDS_ARROWKEYS | 
+                    UDS_NOTHOUSANDS,103,91,11,14
+    GROUPBOX        "Mantissa",IDC_STATIC,117,10,489,59
+    CONTROL         "",IDC_TO_1,"Button",BS_OWNERDRAW | WS_TABSTOP,17,119,16,
+                    53
+    CONTROL         "",IDC_TO_2,"Button",BS_OWNERDRAW | WS_TABSTOP,231,119,
+                    16,53
+    CONTROL         "",IDC_TO_3,"Button",BS_OWNERDRAW | WS_TABSTOP,433,119,
+                    16,53
+    CONTROL         "",IDC_FROM_1,"Button",BS_OWNERDRAW | WS_TABSTOP,37,119,
+                    16,53
+    CONTROL         "",IDC_FROM_2,"Button",BS_OWNERDRAW | WS_TABSTOP,250,119,
+                    16,53
+    CONTROL         "",IDC_FROM_3,"Button",BS_OWNERDRAW | WS_TABSTOP,451,119,
+                    16,53
+    EDITTEXT        IDC_NUMBER1,17,182,190,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMBER2,231,182,190,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NUMBER3,433,182,190,14,ES_AUTOHSCROLL
+    GROUPBOX        "Format",IDC_STATIC,67,229,494,48
+    LTEXT           "%",IDC_STATIC,139,249,8,14,SS_CENTERIMAGE
+    CONTROL         "-",IDC_FORMAT_MINUS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,159,250,19,10
+    CONTROL         "+",IDC_FORMAT_PLUS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,159,261,21,10
+    CONTROL         "0",IDC_FORMAT_ZERO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,183,250,20,10
+    CONTROL         "#",IDC_FORMAT_HASH,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,183,261,21,10
+    CONTROL         "(space)",IDC_FORMAT_BLANK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,207,250,40,10
+    GROUPBOX        "flags",IDC_STATIC,151,236,108,38
+    CONTROL         "None",IDC_WIDTH_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,269,248,33,10
+    CONTROL         "",IDC_USE_WIDTH,"Button",BS_AUTORADIOBUTTON,269,261,10,
+                    8
+    EDITTEXT        IDC_WIDTH,281,257,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_WIDTH,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,321,257,
+                    11,14
+    GROUPBOX        "width",IDC_STATIC,265,236,77,38
+    CONTROL         "None",IDC_PRECISION_NONE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,369,248,33,10
+    CONTROL         "",IDC_USE_PRECISION,"Button",BS_AUTORADIOBUTTON,369,261,
+                    10,8
+    EDITTEXT        IDC_PRECISION,381,257,40,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_SPIN_PRECISION,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS | UDS_NOTHOUSANDS,421,257,
+                    11,14
+    GROUPBOX        "precision",IDC_STATIC,347,236,93,38
+    LTEXT           ".",IDC_DOT,355,254,8,8
+    CONTROL         "e",IDC_TYPE_LOWER_E,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,454,248,20,10
+    CONTROL         "E",IDC_TYPE_UPPER_E,"Button",BS_AUTORADIOBUTTON,454,261,
+                    20,10
+    CONTROL         "f",IDC_TYPE_F,"Button",BS_AUTORADIOBUTTON,480,252,19,10
+    CONTROL         "g",IDC_TYPE_LOWER_G,"Button",BS_AUTORADIOBUTTON,502,248,
+                    20,10
+    CONTROL         "G",IDC_TYPE_UPPER_G,"Button",BS_AUTORADIOBUTTON,501,261,
+                    21,10
+    GROUPBOX        "type",IDC_STATIC,448,236,93,38
+    EDITTEXT        IDC_FORMAT,74,249,63,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_SET_FORMAT_1,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    105,214,10,16
+    CONTROL         "",IDC_SET_FORMAT_2,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    321,214,10,16
+    CONTROL         "",IDC_SET_FORMAT_3,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    533,214,10,16
+    PUSHBUTTON      "+",IDC_ADD,557,122,16,14
+    PUSHBUTTON      "-",IDC_SUBTRACT,557,141,16,14
+    PUSHBUTTON      "*",IDC_MULTIPLY,557,161,16,14
+    PUSHBUTTON      "/",IDC_DIVIDE,579,122,16,14
+    EDITTEXT        IDC_FORMAT_1,105,199,63,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_FORMAT_2,321,198,63,14,ES_AUTOHSCROLL | ES_READONLY
+    EDITTEXT        IDC_FORMAT_3,533,198,63,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "",IDC_SET_FORMAT_N,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    213,109,10,117
+    EDITTEXT        IDC_FORMAT_N,213,92,63,14,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "¶",IDC_SHOW_SPACES,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,194,75,14,14
+    EDITTEXT        IDC_NUMBER,213,74,282,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "+Inf",IDC_PLUS_INFINITY,294,92,50,14
+    PUSHBUTTON      "+NaN",IDC_NAN_PLUS,408,92,50,14
+    EDITTEXT        IDC_HEX_MANTISSA,149,28,238,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_1_TO_2,"Button",BS_OWNERDRAW | WS_TABSTOP,81,118,
+                    50,14
+    CTEXT           "2",IDC_STATIC,133,118,8,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_1_TO_3,"Button",BS_OWNERDRAW | WS_TABSTOP,81,134,
+                    50,14
+    CTEXT           "3",IDC_STATIC,133,134,8,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_2_TO_1,"Button",BS_OWNERDRAW | WS_TABSTOP,286,117,
+                    50,14
+    CTEXT           "1",IDC_STATIC,275,118,8,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_2_TO_3,"Button",BS_OWNERDRAW | WS_TABSTOP,286,133,
+                    50,14
+    CTEXT           "3",IDC_STATIC,338,133,8,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_3_TO_1,"Button",BS_OWNERDRAW | WS_TABSTOP,491,118,
+                    50,14
+    CTEXT           "1",IDC_STATIC,481,119,8,14,SS_CENTERIMAGE
+    CONTROL         "",IDC_3_TO_2,"Button",BS_OWNERDRAW | WS_TABSTOP,491,134,
+                    50,14
+    CTEXT           "2",IDC_STATIC,481,135,8,14,SS_CENTERIMAGE
+    PUSHBUTTON      "-Inf",IDC_MINUS_INFINITY,351,92,50,14
+    PUSHBUTTON      "Clear all",IDC_CLEAR_ALL_MANTISSA,392,28,50,14
+    PUSHBUTTON      "Set All",IDC_SET_ALL_MANTISSA,445,28,50,14
+    CONTROL         "Show Nybbles",IDC_SHOW_NYBBLES,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,505,31,61,10
+    PUSHBUTTON      "-NaN",IDC_NAN_MINUS,465,92,50,14
+    LTEXT           "n1",IDC_STATIC,98,168,9,8
+    LTEXT           "n2",IDC_STATIC,336,169,8,8
+    LTEXT           "n3",IDC_STATIC,537,169,8,8
+    GROUPBOX        "n3 = n1 op n2",IDC_STATIC,551,108,55,71
+    PUSHBUTTON      "Set All",IDC_SET_ALL_EXPONENT,31,19,33,14
+    PUSHBUTTON      "Clear All",IDC_CLEAR_ALL_EXPONENT,69,19,33,14
+    PUSHBUTTON      "2°",IDC_ZERO_EXPONENT,31,35,33,14
+    EDITTEXT        IDC_HEX_EXPONENT,69,35,33,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_NYBBLE01,"Static",SS_BLACKFRAME,566,50,1,15
+    CONTROL         "",IDC_NYBBLE12,"Static",SS_BLACKFRAME,528,50,1,15
+    CONTROL         "",IDC_NYBBLE23,"Static",SS_BLACKFRAME,491,50,1,15
+    CONTROL         "",IDC_NYBBLE34,"Static",SS_BLACKFRAME,454,50,1,15
+    CONTROL         "",IDC_NYBBLE45,"Static",SS_BLACKFRAME,416,50,1,15
+    CONTROL         "",IDC_NYBBLE56,"Static",SS_BLACKFRAME,378,50,1,15
+    CONTROL         "",IDC_NYBBLE67,"Static",SS_BLACKFRAME,341,50,1,15
+    CONTROL         "",IDC_NYBBLE78,"Static",SS_BLACKFRAME,304,50,1,15
+    CONTROL         "",IDC_NYBBLE89,"Static",SS_BLACKFRAME,266,50,1,15
+    CONTROL         "",IDC_NYBBLE910,"Static",SS_BLACKFRAME,230,50,1,15
+    CONTROL         "",IDC_NYBBLE1011,"Static",SS_BLACKFRAME,191,50,1,15
+    CONTROL         "",IDC_NYBBLE1112,"Static",SS_BLACKFRAME,154,50,1,15
+    CONTROL         "",IDC_NYBBLE1314,"Static",SS_BLACKFRAME,79,50,1,15
+    CONTROL         "",IDC_NYBBLE1415,"Static",SS_BLACKFRAME,42,50,1,15
+    PUSHBUTTON      "-IND",IDC_IND,522,92,50,14
+    CHECKBOX        "",IDC_FSR_15,610,148,8,8
+    CHECKBOX        "",IDC_FSR_14,619,148,8,8
+    CHECKBOX        "",IDC_FSR_13,629,148,8,8
+    CHECKBOX        "",IDC_FSR_12,638,148,8,8
+    CHECKBOX        "",IDC_FSR_11,647,148,8,8
+    CHECKBOX        "",IDC_FSR_10,657,148,8,8
+    CHECKBOX        "",IDC_FSR_9,667,148,8,8
+    CHECKBOX        "",IDC_FSR_8,676,148,8,8
+    CHECKBOX        "",IDC_FSR_7,685,148,8,8
+    CHECKBOX        "",IDC_FSR_6,695,148,8,8
+    CHECKBOX        "",IDC_FSR_5,704,148,8,8
+    CHECKBOX        "",IDC_FSR_4,713,148,8,8
+    CHECKBOX        "",IDC_FSR_3,723,148,8,8
+    CHECKBOX        "",IDC_FSR_2,732,148,8,8
+    CHECKBOX        "",IDC_FSR_1,741,148,8,8
+    CHECKBOX        "",IDC_FSR_0,751,148,8,8
+    CONTROL         "",IDC_NYBBLEFSR01,"Static",SS_BLACKFRAME,722,145,1,15
+    CONTROL         "",IDC_NYBBLEFSR12,"Static",SS_BLACKFRAME,684,145,1,15
+    CONTROL         "",IDC_NYBBLEFSR23,"Static",SS_BLACKFRAME,647,145,1,15
+    LTEXT           "\nB",IDC_STATIC,613,130,8,17
+    LTEXT           "C\n3",IDC_STATIC,622,130,8,17
+    LTEXT           "C\n2",IDC_STATIC,659,130,8,17
+    LTEXT           "C\n1",IDC_STATIC,669,130,8,17
+    LTEXT           "C\n0",IDC_STATIC,678,130,8,17
+    LTEXT           "E\nS",IDC_STATIC,689,130,8,17
+    LTEXT           "S\nF",IDC_STATIC,698,130,8,17
+    LTEXT           "P\nE",IDC_STATIC,707,130,8,17
+    LTEXT           "U\nE",IDC_STATIC,716,130,8,17
+    LTEXT           "O\nE",IDC_STATIC,725,130,8,17
+    LTEXT           "Z\nE",IDC_STATIC,734,130,8,17
+    LTEXT           "D\nE",IDC_STATIC,744,130,8,17
+    LTEXT           "I\nE",IDC_STATIC,755,130,8,17
+    CTEXT           "\nTop",IDC_STATIC,631,130,26,17
+    EDITTEXT        IDC_TOP,631,161,25,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY
+    GROUPBOX        "x87 FPU Status Word",IDC_STATIC,608,108,219,71
+    PUSHBUTTON      "Clear",IDC_CLEAR87,683,162,50,14
+    PUSHBUTTON      "F2XM1 n1->n3",IDC_F2XM1,6,283,100,14
+    PUSHBUTTON      "FABS n1->n3",IDC_FABS,111,283,100,14
+    PUSHBUTTON      "FCHS n1->n3",IDC_FCHS,216,283,100,14
+    PUSHBUTTON      "FCOMP n1,n2",IDC_FCOM,321,283,100,14
+    PUSHBUTTON      "FCOS n1 -> n3",IDC_FCOS,426,283,100,14
+    PUSHBUTTON      "FLD1 -> n3",IDC_FLD1,6,299,100,14
+    PUSHBUTTON      "FLDL2T -> n3",IDC_FLDL2T,111,299,100,14
+    PUSHBUTTON      "FLDL2E -> n3",IDC_FLDL2E,216,299,100,14
+    PUSHBUTTON      "FLDPI -> n3",IDC_FLDPI,321,299,100,14
+    PUSHBUTTON      "FLDLG2 -> n3",IDC_FLDLG2,426,299,100,14
+    PUSHBUTTON      "FLDLN2 -> n3",IDC_FLDLN2,6,315,100,14
+    PUSHBUTTON      "FLDZ -> n3",IDC_FLDZ,111,315,100,14
+    PUSHBUTTON      "FPATAN arctan(n2/n1)->n3",IDC_FPATAN,216,315,100,14
+    PUSHBUTTON      "FPREM n2/n1 -> n3",IDC_FPREM,321,315,100,14
+    PUSHBUTTON      "FPREM1 n2/n1 -> n3",IDC_FPREM1,426,315,100,14
+    PUSHBUTTON      "FPTAN n1 -> n3",IDC_FPTAN,6,331,100,14
+    PUSHBUTTON      "FRNDINT n1 -> n3",IDC_FRNDINT,111,331,100,14
+    PUSHBUTTON      "FSCALE n1 by n2 -> n3",IDC_FSCALE,216,331,100,14
+    PUSHBUTTON      "FSIN n1 -> n3",IDC_FSIN,321,331,100,14
+    PUSHBUTTON      "FSINCOS n1 -> n2,n3",IDC_FSINCOS,426,331,100,14
+    PUSHBUTTON      "FSQRT n1 -> n3",IDC_FSQRT,6,347,100,14
+    PUSHBUTTON      "FXAM n1",IDC_FXAM,111,347,100,14
+    PUSHBUTTON      "FXTRACT n1->n2,n3",IDC_FXTRACT,216,347,100,14
+    PUSHBUTTON      "FYL2X n1*log2(n2)->n3",IDC_FYL2X,321,347,100,14
+    PUSHBUTTON      "FYL2XP1 n1*log2(n2+1)->n3",IDC_FYL2XP1,426,347,100,14
+    EDITTEXT        IDC_CODE,539,282,288,80,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | WS_VSCROLL
+    EDITTEXT        IDC_STATUS_COMMENT,711,114,112,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "FlounderCraft Ltd"
+            VALUE "FileDescription", "Floating Point Explorer"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "fp.exe"
+            VALUE "LegalCopyright", "Copyright © FlounderCraft Ltd.  All rights reserved."
+            VALUE "OriginalFilename", "fp.exe"
+            VALUE "ProductName", "Floating Point Explorer"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 63
+    END
+
+    IDD_FP_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 820
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 356
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Floating Point Explorer..."
+    IDS_UNSUPPORTED         "Unsupported"
+    IDS_NAN                 "NaN"
+    IDS_NORMAL_FINITE       "Normal finite"
+    IDS_INFINITY            "Infinity"
+    IDS_ZERO                "Zero"
+    IDS_EMPTY               "Empty"
+    IDS_DENORMAL            "Denormalized"
+    IDS_FP_UNKNOWN          "Unknown C0.C2.C3"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_FSR_1               "IE: Invalid operation"
+    IDC_FSR_2               "DE: Denormalized operand"
+    IDC_FSR_3               "ZE: Zero divide"
+    IDC_FSR_4               "OE: Overflow"
+    IDC_FSR_5               "UE: Underflow"
+    IDC_FSR_6               "PE: Precision"
+    IDC_FSR_7               "ES: Error summary"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_FSR_8               "C0: Condition code 0"
+    IDC_FSR_9               "C1: Condition code 1"
+    IDC_FSR_10              "C2: Condition code 2"
+    IDC_FSR_11              "TOP<0>"
+    IDC_FSR_12              "TOP<1>"
+    IDC_FSR_13              "TOP<2>"
+    IDC_FSR_14              "C3: Condition code 3"
+    IDC_FSR_15              "B: FPU busy"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "res\fp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
