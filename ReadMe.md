@@ -6,31 +6,28 @@ The screen is divided into several sections.  The upper part of the screen deals
 
 ## The Exponent Box
 
-![The Exponent Box](./assets/images/exponentbox.png)
-
 The `Set All` and `Clear All` buttons will set or clear all the bits of the exponent.  The `2^0` button sets the exponent to represent `2^0`.
 
 The edit control displays the exponent in hexadecimal.  You can type the desired hexadecimal exponent, which ranges from `0000` to `07FF`. 
 
-![The Exponent Spin Controls](./assets/images/exponentspin.png)
+![The Exponent Box](./assets/images/exponentbox.png)
 
 The `Value` edit control and associated spin control show and allow you to modify the exponent value, which is allowed to be in the range of `0..2047`.  However, the more natural represention would be the `Excess-1023` representation.  Thus 0 given in the `Excess-1023` control represents the absolute numeric `Value` in the exponent of 1023.
 
+![The Exponent Spin Controls](./assets/images/exponentspin.png)
+
 ## The Mantissa Box
 
-![The Mantissa Box](./assets/images/mantissabox.png)
+The `Set All` and `Clear All` buttons will set or clear all the bits of the mantissa. The representation also allows you to see the hexadecimal value of the mantissa, and edit it by changing the hex value displayed.
 
-The `Set All` and `Clear All` buttons will set or clear all the bits of the mantissa.
+![The Mantissa Box](./assets/images/mantissabox.png)
 
 The `Show Nybbles` check box displays markers every four bits, making it somewhat easier to read the bits.
 
 ![The Show Nybbles Box](./assets/images/shownnybbles.png)
 
-The representation also allows you to see the hexadecimal value of the mantissa, and edit it by changing the hex value displayed.
-
-![The NaN and inf Buttons](./assets/images/naninf.png)
-
 There are four buttons to select specific representations, such as `+inf`, `-inf`, `+Nan` and `-NaN`.  For the NaN representations, an exponent of all 1s and a nonzero mantissa is a NaN, and I arbitrarily chose to set the low-order bit of the mantissa to represent these values.  You can experiment with other bits.
+![The NaN and inf Buttons](./assets/images/naninf.png)
 
 Together, all of these controls allow you to manipulate what is called "The Number". 
 
