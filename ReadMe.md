@@ -1,4 +1,5 @@
 # fp: The Floating Point Explorer
+Note: This is a work-in-progress.  It is not currently complete.
 
 ![The FP main screen](./assets/images/fpscreen.png)
 
@@ -16,11 +17,11 @@ The `Value` edit control and associated spin control show and allow you to modif
 
 ![The Exponent Spin Controls](./assets/images/exponentspin.png)
 
-## The Mantissa Box
+## TheSignificand Box
 
-The `Set All` and `Clear All` buttons will set or clear all the bits of the mantissa. The representation also allows you to see the hexadecimal value of the mantissa, and edit it by changing the hex value displayed.
+The `Set All` and `Clear All` buttons will set or clear all the bits of the significand. The representation also allows you to see the hexadecimal value of the significand, and edit it by changing the hex value displayed.
 
-![The Mantissa Box](./assets/images/mantissabox.png)
+![The Significand Box](./assets/images/mantissabox.png)
 
 The `Show Nybbles` check box displays markers every four bits, making it somewhat easier to read the bits.
 
@@ -29,23 +30,32 @@ The `Show Nybbles` check box displays markers every four bits, making it somewha
 There are four buttons to select specific representations, such as `+inf`, `-inf`, `+Nan` and `-NaN`.  For the NaN representations, an exponent of all 1s and a nonzero mantissa is a NaN, and I arbitrarily chose to set the low-order bit of the mantissa to represent these values.  You can experiment with other bits.
 ![The NaN and inf Buttons](./assets/images/naninf.png)
 
+## The Number
 Together, all of these controls allow you to manipulate what is called "The Number". 
 
 ![The Number](./assets/images/thenumber.png)
+
+## The Working Registers
 
 There are three "working registers" designated `n1`, `n2` and `n3`.
 
 ![The Working Registers](./assets/images/n1n2n3.png)
 
-The large vertical arrow buttons pointing downward transfer a value from The Number to one of the three  The large upward pointing arrows transfer a value from one of the working registers to The Number, so it can be examined in detail.
+## Transferring to and from The Number
+
+The large vertical arrow buttons pointing downward transfer a value from The Number to one of the three working registers.  The large upward pointing arrows transfer a value from one of the working registers to The Number, so it can be examined in detail.
 
 ![The Transfer Number Arrows](./assets/images/transferarrows.png)
+
+## Transferring Working Registers
 
 The horizontal arrow buttons transfer a value from the working register below them to one of the other working registers. 
 
 ![The 1->2,3 Arrows](./assets/images/123arrows.png)
 ![The 2->1,3 Arrows](./assets/images/213arrows.png)
 ![The 3->1,2 Arrows](./assets/images/312arrows.png)
+
+## The Operation buttons
 
 The operation buttons perform the indicated operation `n3 = n1 op n2`. 
 
@@ -64,9 +74,15 @@ In terms of formatting, this also allows you to see the effects of the various f
 ![The Format set buttons](./assets/images/formatset.png)
 ![The Format The Number set buttons](./assets/images/formatTheNumber.png)
 
-### The FPU ops button
+### The FPU ops buttons
 
 An FPU has a number of built-in operations.  These instructions will be executed based on which button is clicked.  Each button specifies where it gets its operand(s) and where it puts its result.  The instructions used appear in the box on the right.
+
+The buttons are arranged in alphabetical order, left-to-right, top-to-bottom.
+
+The convention used is that when the instruction references the two top stack elements, referred to in the manuals as `ST(0)` and `ST(1)`, `n1` represents `ST(0)`` and 'n2' represents `ST(1)`.
+
+![The FPU operation buttons](./assets/images/fpuops.png)
 
 | Operation | Source | Destination | Function |
 |---|:---:|:---:|---|
@@ -87,7 +103,7 @@ An FPU has a number of built-in operations.  These instructions will be executed
 | FPREM1 |n1,n2| n3 | n3 = ?(rnd(n1 / n2) * n2) |
 | FPTAN | n1 | n3 | n3 = tan(n1) |
 | FRNDINT | n1 | n3 | n2 = ⌈(int)n1 + 0.5⌉ |
-| FSCALE | n1,n2| n3 | |
+| FSCALE | n1,n2| n3 | n3 = n1 * 2^(rnd0(n2)) |
 | FSIN  | n1 | n3 | n3 = sin(n1) |
 | FSINCOS |n1| n2,n3| n2 = sin(n1); n3 = cos(n1) |
 | FSQRT | n1 | n3 | n3 = √n1 |
@@ -96,23 +112,121 @@ An FPU has a number of built-in operations.  These instructions will be executed
 | FYL2X |n1,n2| n3 | n3 = n1 * log2(n2) |
 | FYL2XP1 | n1,n2| n3 | n3 = n1 * log2(n2 + 1) |
 
-![The FPU operation buttons](./assets/images/fpuops.png)
+`rnd0()` is round-towards-zero, that is, the fractional part is truncated and only the integer part is considered.
+
+#### F2XM1 results
+
+Computes 2^(n1) - 1. 'n1' must be in the range -1.0..+1.0
+
+|n1 | n3 |  
+|:---:    |:---:|
+| -1.0 to -0 | -0.5 to -0 |
+| -0 | -0 |
+| +0 | +0 |
+| +0 to +1.0 | +0 to 1.0 |
+
+Note that values other than 2 can be exponentiated according to the formula
+x^y = 2^(y * log2(x))
+
+#### FABS results
+
+|n1 | n3 |  
+|:---:    |:---:|
+| -∞ | +∞ |
+| -F | +F |
+| -0 | +0 |
+| +0 | +0 |
+| +F | +F |
+| +∞ | +∞ |
+| NaN | NaN |
+
+#### FCHS results
+
+|n1 | n3 |  
+|:---:    |:---:|
+| -∞ | +∞ |
+| -F | +F |
+| -0 | +0 |
+| +0 | -0 |
+| +F | -F |
+| +∞ | -∞ |
+| NaN | NaN |
+
+#### FCOS results
+
+|n1 | n3 |  
+|:---:    |:---:|
+| -∞ | \* |
+| -F | -1 to +1 |
+| -0 | +1 |
+| +0 | +1 |
+| +F | -1 to +1 |
+| +∞ | \* |
+| NaN | NaN |
+
+* indicates an invalid-operand exception, which is indicated by the IE bit in the FPU Status Word
 
 #### FPREM/FPREM1 results
 
 |n1↓ n2→  | -∞  | -F  | -0  | +0  | +F  | +∞  | NaN |
 |:---:    |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| -∞      | *   | *   | *   | *   | *   | *   | NaN |
-| -F      | n1  | ±F or -0  | **  | **  | ±F or -0 |  n1 | NaN |
-| -0      | -0  | -0  | *   | *   | -0  | -0  | Nan |
-| +0      | +0  | +0  | *   | *   | -0  | -0  | NaN |
-| +F      | n1  | ±F or +0  | **  | **  | ±F or +0 | n1 | NaN |
-| +∞      | *   | *   | *   | *   | *   | *   | NaN |
+| -∞      | \*   | \*   | \*   | \*   | \*   | \*   | NaN |
+| -F      | n1  | ±F or -0  | \*\*  | **  | ±F or -0 |  n1 | NaN |
+| -0      | -0  | -0  | \*   | \*   | -0  | -0  | Nan |
+| +0      | +0  | +0  | \*   | \*   | -0  | -0  | NaN |
+| +F      | n1  | ±F or +0  | \*\*  | \*\*  | ±F or +0 | n1 | NaN |
+| +∞      | \*   | \*   | \*   | \*   | \*   | \*   | NaN |
 | Nan     | NaN | NaN | NaN | NaN | NaN | Nan | Nan |
+
+"\*" indicates an invalid-operand exception, which is indicated by the IE bit in the FPU Status Word
+
+#### FSIN results
+
+|n1 | n3 |  
+|:---:    |:---:|
+| -∞ | \* |
+| -F | -1 to +1 |
+| -0 | -0 |
+| +0 | +0 |
+| +F | -1 to +1 |
+| +∞ | \* |
+| NaN | NaN |
+
+#### FSINCOS results
+
+|n1 | n2 sin | n3 cos |
+|:---:    |:---:|:---:|
+| -∞ | \* | \* |
+| -F | -1 to +1 | -1 to +1 |
+| -0 | -0 | +1 |
+| +0 | +0 | +1 |
+| +F | -1 to +1 | -1 to +1
+| +∞ | \* | \* |
+| NaN | NaN | Nan |
+
+"\*" indicates an invalid-operand exception, which is indicated by the IE bit in the FPU Status Word
+
+#### FSQRT results
+
+|n1 | n3 |  
+|:---:    |:---:|
+| -∞ | \* |
+| -F | \* |
+| -0 | -0 |
+| +0 | +0 |
+| +F | √F |
+| +∞ | +∞ |
+| NaN | NaN |
+
+#### FXTRACT results
+
+This instruction extracts the exponent and the significand from the value in 'n1'.  The exponent, which is the power of 2, is  stored in `n2`, and the significand is stored in `n3`.  The significand is essentially identical to the significand in `n1`, except its exponent is 0, which means, in excess-1023 notation, it is 1023.
 
 ### The x87 FPU status word
 
-For compatibilitly with existing libraries, there is an equivalent of the x87 FPU status register.  This appears on the right of the Explorer.  These bits are read-only boxes and cannot be set by the user.
+For compatibilitly with existing libraries, there is an equivalent of the x87 FPU status register.  This appears on the right of the Explorer.  These bits are read-only boxes and cannot be set by the user.  However, they should be cleared before performing an operation you need to use them after, since they are not cleared automatically.
+
+The small box under the "Top" bits decodes the stack pointer depth.
 
 ![The FPU status register](./assets/images/fpustatus.png)
 
@@ -147,28 +261,64 @@ For compatibilitly with existing libraries, there is an equivalent of the x87 FP
 | Negative    |   |   | 1 |   |
 
 ### Floating point condition codes
-#### C0 == 1
+#### C0
 
 | Instruction | Condition |
 |---|---|
-| FXAM | Normal finite number (C3==0 && C0 == 0)
-|      | Denormal number (C3 == 1 && C0 == 0)
+| FCOS | undefined |
+| FRNDINT | undefined |
+| FSCALE | undefined |
+| FSIN | undefined |
+| FSINCOS | undefined |
+| FSQRT | undefined |
+| FSUB | undefined |
+| FXAM | _See FXAM table_ |
 
-#### C1 == 1
+#### C1
 
 | Instruction | Condition |
-| FXAM | Negative number
+| FRNDINT | 0: Stack underflow |
+|         | 1: Result was rounded up |
+| FSCALE  | 0: Stack underflow or result was not rounded up |
+|         | 1: Result was rounded up |
+| FSIN    | 0: Stack underflow or result was not rounded up |
+|         | 1: Result was rounded up |
+| FSINCOS | 0: Stack underflow or result was not rounded up |
+|         | 1: Result was rounded up |
+| FSQRT   | 0: Stack underflow or result was not rounded up | 
+|         | 1: Result was rounded up |
+| FSUB    | 0: Stack underflow or result was not rounded up |
+|         | 1: Result was rounded up |
+| FXAM    | 0: Positive number |
+|         | 1: Negative number |
 
-#### C2 == 1
+#### C2
 
 | Instruction | Condition |
 |---|----| 
-| FPTAN | Operand outside acceptable range |
+| FPTAN | 1: Operand outside acceptable range |
+| FRNDINT | undefined |
+| FSIN | 0: Source operand in valid range |
+|      | 1: Source operand outside range (-2^63 < n1 < 2^63)
+| FSINCOS | 0: Source operand in valid range |
+|      | 1: Source operand outside range (-2^63 < n1 < 2^63)
+| FSCALE | undefined |
+| FSQRT | undefined |
+| FSUB  | undefined |
+| FXAM | _See FXAM table_ |
+
+#### C3
 
 | Instruction | Condition |
 |---|----| 
-
-#### C3 == 1
+| FCOS | undefined |
+| FRNDINT | undefined |
+| FSCALE | undefined |
+| FSIN | undefined |
+| FSINCOS | undefined |
+| FSQRT | undefined |
+| FSUB  | undefined |
+| FXAM | _See FXAM table_ |
 
 ## 32-bit application
 
